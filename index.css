@@ -1,0 +1,89 @@
+html {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Fira Sans';
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.3rem;
+}
+
+.content {
+  width: 57em;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px 0 0;
+}
+
+footer {
+  margin: 0 1rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  position: relative;
+  font-size: smaller;
+}
+
+footer * { text-align: center; }
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .github {
+  width: 30px;
+  height: 30px;
+  background: url('github.svg') no-repeat;
+  display: block;
+  margin: .5rem auto;
+}
+
+footer .mail:hover { text-decoration: underline; }
+
+pre {
+  display: block;
+  background: rgba(255,255,255,.1);
+  line-height: 1.6;
+  font-size: 13px;
+  padding: 10px 10px;
+  border-radius: .4em;
+  overflow-x: auto;
+  cursor: pointer;
+}
+
+code { white-space: nowrap; }
+.ct { color: grey; }
+
+.tooltip {
+  padding: .2rem .5rem;
+  background: rgba(255,255,255,.4);
+  border-radius: .4em;
+  position: absolute;
+  left: -70px;
+  top: 8px;
+  font-size: .8rem;
+}
+
+figure { position: relative; }
+.bs { white-space: pre; }
+
+@media screen and (max-width: 768px) {
+  .tooltip {
+    right: 10px;
+    left: auto;
+    background: rgba(255,255,255,.6);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 { text-align: left; }
+  body { padding: 0 15px;}
+  figure{
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  h1 { font-size: 2.3rem; }
+}
