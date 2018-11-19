@@ -15,6 +15,29 @@
     <img style="width: 57em; max-width: 100%" src="https://cloudflare-ipfs.com/ipfs/Qmb88fgdDjbWkxz91sWsgmoZZNfVThnCtj37u3mF2s3T3T"></img>
     <div onclick="selectCode(event)">
       out-of-tree kernel {module, exploit} development tool
+      <h2>Usage</h2>
+      Build && run module/exploit
+      <figure><pre><code>$ <span class="cmd">out-of-tree pew</span></code></pre></figure>
+      Test only with one kernel
+      <figure><pre><code>$ <span class="cmd">out-of-tree pew --kernel='Ubuntu:4.10.0-30-generic'</span></code></pre></figure>
+      Test compiled module/exploit
+      <figure><pre><code>$ <span class="cmd">out-of-tree pew --binary some_exploit --test some_exploit_test</span></code></pre></figure>
+      Identifying vulnerable kernel version
+      <figure><pre><code>$ <span class="cmd">out-of-tree pew --guess</span></code></pre></figure>
+      And more examples in <a href="https://github.com/jollheef/out-of-tree/blob/master/README.md#examples">README.md</a>
+      <h2>Configuration</h2>
+      <figure><pre><code>$ <span class="cmd">cat kernel-exploit/.out-of-tree.toml<br>
+	      name = "CVE-XXXX-YYYYY exploit"<br>
+	      type = "exploit" # or "module" for LKM<br>
+	      <br>
+	      [[supported_kernels]]<br>
+	      distro_type = "Ubuntu"<br>
+	      release_mask = "4.4.0-(1|2|3|4)-.*"<br>
+	      <br>
+	      [[supported_kernels]]<br>
+	      distro_type = "Ubuntu"<br>
+	      release_mask = "4.8.0-(1|2|3|4|5|6|7|8|9|10)-.*"<br>
+      </span></code></pre></figure>
       <h2>Installation</h2>
       If you already have Go, Qemu and Docker installed, there's cross-platform installation checklist:
       <figure><pre><code>$ <span class="cmd">go get github.com/jollheef/out-of-tree</span></code></pre></figure>
