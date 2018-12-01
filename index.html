@@ -43,20 +43,12 @@
       <h2>Installation</h2>
       If you already have Go, Qemu and Docker installed, there's cross-platform installation checklist:
       <figure><pre><code>$ <span class="cmd">go get github.com/jollheef/out-of-tree</span></code></pre></figure>
-      <figure><pre><code>$ <span class="cmd">cd $GOPATH/src/github.com/jollheef/out-of-tree/tools/qemu-debian-img/</span></code></pre></figure>
-      <figure><pre><code>$ <span class="cmd">./bootstrap.sh</span></code></pre></figure>
-      <figure><pre><code>$ <span class="cmd">docker run --privileged -v $(pwd):/shared \<br>
-        <span class="bs">              </span>-e IMAGE=/shared/ubuntu1604.img \<br>
-        <span class="bs">              </span>-e RELEASE=xenial -t gen-ubuntu1804-image</span></code></pre></figure>
-      <figure><pre><code>$ <span class="cmd">cd ../kernel-factory</span></code></pre></figure>
-      <figure><pre><code>$ <span class="cmd">rm -rf {Debian,CentOS,Ubuntu/{14.04,18.04}} <span class="ct"># speed up :)</span></span></code></pre></figure>
-      <figure><pre><code>$ <span class="cmd">./bootstrap.sh <span class="ct"># wait several hours...</span></span></code></pre></figure>
-      <figure><pre><code>$ <span class="cmd">export OUT_OF_TREE_KCFG=$GOPATH/src/github.com/jollheef/out-of-tree/tools/kernel-factory/output/kernels.toml</span></code></pre></figure>
+      <figure><pre><code>$ <span class="cmd">out-of-tree bootstrap </span></code></pre></figure>
       Test kernel exploit
-      <figure><pre><code>$ <span class="cmd">cd ../../examples/kernel-exploit</span></code></pre></figure>
+      <figure><pre><code>$ <span class="cmd">cd $GOPATH/github.com/jollheef/out-of-tree/examples/kernel-exploit</span></code></pre></figure>
       <figure><pre><code>$ <span class="cmd">out-of-tree pew</span></code></pre></figure>
       Test kernel module
-      <figure><pre><code>$ <span class="cmd">cd ../kernel-module</span></code></pre></figure>
+      <figure><pre><code>$ <span class="cmd">cd $GOPATH/github.com/jollheef/out-of-tree/examples/kernel-module</span></code></pre></figure>
       <figure><pre><code>$ <span class="cmd">out-of-tree pew</span></code></pre></figure>
       <br>
       See also <a href="https://github.com/jollheef/out-of-tree/blob/master/README.md">README.md</a>
