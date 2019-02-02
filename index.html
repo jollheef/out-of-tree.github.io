@@ -26,7 +26,7 @@
       <figure><pre><code>$ <span class="cmd">out-of-tree pew --binary some_exploit --test some_exploit_test</span></code></pre></figure>
       Identifying vulnerable kernel version
       <figure><pre><code>$ <span class="cmd">out-of-tree pew --guess</span></code></pre></figure>
-      And more examples in <a href="https://github.com/jollheef/out-of-tree/blob/master/README.md#examples">README.md</a>
+      And more examples in <a href="https://code.dumpstack.io/tools/out-of-tree/src/branch/master/README.md#examples">README.md</a>
       <h2>Configuration</h2>
       <figure><pre><code>$ <span class="cmd">cat kernel-exploit/.out-of-tree.toml<br>
 	      name = "CVE-XXXX-YYYYY exploit"<br>
@@ -44,14 +44,14 @@
       </span></code></pre></figure>
       <h2>Installation</h2>
       If you already have Go, Qemu and Docker installed, there's cross-platform installation checklist:
-      <figure><pre><code>$ <span class="cmd">go get -u github.com/jollheef/out-of-tree</span></code></pre></figure>
+      <figure><pre><code>$ <span class="cmd">go get -u code.dumpstack.io/tools/out-of-tree</span></code></pre></figure>
       <figure><pre><code>$ <span class="cmd">out-of-tree bootstrap </span></code></pre></figure>
       Test kernel module
-      <figure><pre><code>$ <span class="cmd">cd $GOPATH/github.com/jollheef/out-of-tree/examples/kernel-module</span></code></pre></figure>
+      <figure><pre><code>$ <span class="cmd">cd $GOPATH/code.dumpstack.io/tools/out-of-tree/examples/kernel-module</span></code></pre></figure>
       <figure><pre><code>$ <span class="cmd">out-of-tree kernel autogen <span class="ct"># generate kernels based on .out-of-tree.toml</span></span></code></pre></figure>
       <figure><pre><code>$ <span class="cmd">out-of-tree pew</span></code></pre></figure>
       Test kernel exploit
-      <figure><pre><code>$ <span class="cmd">cd $GOPATH/github.com/jollheef/out-of-tree/examples/kernel-exploit</span></code></pre></figure>
+      <figure><pre><code>$ <span class="cmd">cd $GOPATH/code.dumpstack.io/tools/out-of-tree/examples/kernel-exploit</span></code></pre></figure>
       <figure><pre><code>$ <span class="cmd">out-of-tree pew</span></code></pre></figure>
       <br>
       See also <a href="https://github.com/jollheef/out-of-tree/blob/master/README.md">README.md</a>
